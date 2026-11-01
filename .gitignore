@@ -1,2 +1,78 @@
 __pycache__/
 *.onnx
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+.ipynb_checkpoints/
+
+# ===== Node / Frontend =====
+node_modules/
+frontend/dist/
+playwright-report/
+test-results/
+
+# ===== Secrets & môi trường =====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+docker-compose.override.yml
+docker/certs/*
+!docker/certs/.gitkeep
+
+# ===== Model weights (tải bằng scripts/ai/download_models.py) =====
+*.onnx
+*.pt
+*.pth
+*.h5
+*.tflite
+*.task
+models/*
+!models/README.md
+!models/.gitkeep
+
+# ===== Dữ liệu cá nhân / ảnh mặt: KHÔNG commit =====
+data/faces/*
+!data/faces/README.md
+!data/faces/.gitkeep
+data/live_tmp/*
+!data/live_tmp/.gitkeep
+data/private/*
+!data/private/.gitkeep
+data/qr_out/*
+!data/qr_out/.gitkeep
+data/synthetic/*
+!data/synthetic/README.md
+!data/synthetic/.gitkeep
+data/liveness_eval/
+
+# ===== Kết quả thí nghiệm thô (chỉ đưa bản tóm tắt vào docs/) =====
+ai/experiments/results/
+
+# ===== Video, dump, DB cục bộ =====
+*.mp4
+*.avi
+*.mov
+*.webm
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+
+# ===== IDE / OS =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
