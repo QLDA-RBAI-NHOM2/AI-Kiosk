@@ -1,11 +1,12 @@
 {
-  "face_match": {
-    "cosine_threshold": 0.5
+  "status": "UNCALIBRATED",
+  "face_verification": {
+    "metric": "cosine_similarity",
+    "threshold": null,
+    "calibration_report": null
   },
   "liveness": {
-    "left_ratio": 1.8,
-    "right_ratio": 0.55,
-    "front_min": 0.7,
-    "front_max": 1.3
+    "threshold": null,
+    "calibration_report": null
   }
 }
