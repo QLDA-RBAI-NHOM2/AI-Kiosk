@@ -1,0 +1,16 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files
+        args: ["--maxkb=1024"]
+      - id: check-merge-conflict
+      - id: detect-private-key
+  - repo: local
+    hooks:
+      - id: forbidden-files
+        name: forbidden-files
+        entry: bash scripts/ops/check_forbidden_files.sh
+        language: system
+        pass_filenames: false
+        always_run: true

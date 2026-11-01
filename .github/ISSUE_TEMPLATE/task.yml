@@ -1,0 +1,21 @@
+name: Công việc (task)
+description: Một đầu việc theo bảng phân công
+title: "[Module] "
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Mục tiêu
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Sản phẩm bàn giao và cách kiểm tra
+    validations:
+      required: true
+  - type: input
+    id: ref
+    attributes:
+      label: Căn cứ hợp đồng
+      description: Ví dụ khoản 5.1.c, Phụ lục 02

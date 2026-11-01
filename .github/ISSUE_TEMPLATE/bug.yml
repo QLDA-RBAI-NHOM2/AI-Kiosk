@@ -1,0 +1,24 @@
+name: Lỗi (bug)
+description: Báo lỗi, ghi mức độ theo khoản 6.6
+title: "[Bug] "
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Mức độ (khoản 6.6)
+      options:
+        - Nghiêm trọng
+        - Trung bình
+        - Nhẹ
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Các bước tái hiện, kết quả mong đợi và kết quả thực tế
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log (đã ẩn số định danh, không đính kèm ảnh khuôn mặt)
