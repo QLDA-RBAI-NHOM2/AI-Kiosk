@@ -1,0 +1,28 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  python-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Cài công cụ kiểm tra
+        run: pip install ruff pytest
+      - name: Lint
+        run: ruff check --config pyproject.toml .
+      - name: Kiểm tra thresholds.json hợp lệ
+        run: python -m json.tool ai/kiosk_ai/thresholds.json > /dev/null
+      - name: Unit test AI (bỏ test model nặng)
+        run: |
+          set +e
+          pytest ai/tests --ignore=ai/tests/test_slow_models.py -q
+          code=$?
+          if [ "$code" -eq 5 ]; then echo "Chưa có test nào được thu thập"; exit 0; fi
+          exit "$code"

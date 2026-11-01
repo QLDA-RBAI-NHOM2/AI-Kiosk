@@ -1,0 +1,16 @@
+name: Yêu cầu thay đổi (Điều 9, khoản 5.3)
+description: Đổi thư viện, mô hình hoặc phạm vi, cần Bên A chấp thuận bằng văn bản
+title: "[CR] "
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Nội dung và lý do thay đổi
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Ảnh hưởng đến tiến độ, chi phí và KPI
+    validations:
+      required: true

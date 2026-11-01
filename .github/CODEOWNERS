@@ -1,0 +1,57 @@
+# Dòng sau ghi đè dòng trước. Mỗi đường dẫn có 2 owner để tác giả không bị chặn khi tự gửi PR.
+*                                   @HoangAnhAn04 @trannam1084
+/.github/                           @HoangAnhAn04 @trannam1084
+/docker/                            @HoangAnhAn04 @trannam1084
+/docker-compose.yml                 @HoangAnhAn04 @trannam1084
+/docker-compose.dev.yml             @HoangAnhAn04 @trannam1084
+/Makefile                           @HoangAnhAn04 @trannam1084
+
+# Backend (Hoàng Anh)
+/backend/                           @HoangAnhAn04 @trannam1084
+/tests/acceptance/                  @HoangAnhAn04 @trannam1084
+/tests/security/                    @HoangAnhAn04 @trannam1084
+/e2e/                               @HoangAnhAn04 @nhatshine
+
+# Dữ liệu và CSDL (Thành)
+/db/                                @cyanotic0606-cloud @HoangAnhAn04
+/backend/alembic/                   @cyanotic0606-cloud @HoangAnhAn04
+/scripts/db/                        @cyanotic0606-cloud @HoangAnhAn04
+/scripts/qr/                        @cyanotic0606-cloud @CHUVO04
+/data/seed/                         @cyanotic0606-cloud @HoangAnhAn04
+/tests/performance/                 @cyanotic0606-cloud @HoangAnhAn04
+/scripts/ops/wipe_demo_data.py      @cyanotic0606-cloud @HoangAnhAn04
+
+# Frontend (Nhật)
+/frontend/                          @nhatshine @HoangAnhAn04
+
+# AI: nhánh QR và Face (Vũ)
+/ai/                                @CHUVO04 @trannam1084
+/ai/kiosk_ai/qr/                    @CHUVO04 @trannam1084
+/ai/kiosk_ai/face/                  @CHUVO04 @trannam1084
+/ai/experiments/eval_qr.py          @CHUVO04 @trannam1084
+/ai/tests/test_qr_*.py              @CHUVO04 @trannam1084
+/ai/tests/test_matcher.py           @CHUVO04 @trannam1084
+/scripts/ai/                        @CHUVO04 @trannam1084
+
+# AI: nhánh Liveness và đánh giá (Nam)
+/ai/kiosk_ai/liveness/              @trannam1084 @CHUVO04
+/ai/kiosk_ai/thresholds.json        @trannam1084 @CHUVO04
+/ai/experiments/eval_liveness.py    @trannam1084 @CHUVO04
+/ai/experiments/eval_threshold.py   @trannam1084 @CHUVO04
+/ai/tests/test_liveness_*.py        @trannam1084 @CHUVO04
+
+# Giao diện chung giữa AI và Backend (Vũ và Nam, Hoàng Anh duyệt)
+/ai/kiosk_ai/pipeline.py            @CHUVO04 @trannam1084 @HoangAnhAn04
+/ai/kiosk_ai/types.py               @CHUVO04 @trannam1084 @HoangAnhAn04
+/ai/kiosk_ai/config.py              @CHUVO04 @trannam1084 @HoangAnhAn04
+/ai/kiosk_ai/timing.py              @CHUVO04 @trannam1084 @HoangAnhAn04
+
+# Tài liệu
+/docs/                              @HoangAnhAn04 @trannam1084
+/docs/project-management/           @PhucLe204 @HoangAnhAn04
+/docs/security/                     @HoangAnhAn04 @trannam1084
+/docs/security/consent-process.md   @PhucLe204 @HoangAnhAn04
+/docs/testing/reports/liveness-spoof.md          @trannam1084 @CHUVO04
+/docs/testing/reports/threshold-and-far-frr.md   @trannam1084 @CHUVO04
+/docs/testing/reports/qr-read-rate.md            @CHUVO04 @trannam1084
+/docs/testing/reports/db-benchmark.md            @cyanotic0606-cloud @HoangAnhAn04

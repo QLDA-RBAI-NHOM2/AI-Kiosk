@@ -1,0 +1,22 @@
+name: Đo KPI (Phụ lục 02)
+description: Một phép đo KPI có số liệu thật
+title: "[KPI] "
+body:
+  - type: input
+    id: kpi
+    attributes:
+      label: KPI cần đo
+      description: Ví dụ FAR, FRR, tỷ lệ chặn giả mạo, median/P95
+    validations:
+      required: true
+  - type: textarea
+    id: condition
+    attributes:
+      label: Điều kiện đo và số lượt đo
+      description: Ánh sáng, khoảng cách camera 40 đến 60 cm, số lượt
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Kết quả (chỉ ghi số đo thực tế)
