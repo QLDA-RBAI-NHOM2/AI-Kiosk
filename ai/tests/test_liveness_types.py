@@ -1,5 +1,4 @@
 import pytest
-
 from kiosk_ai.types import LivenessErrorCode, LivenessResult, LivenessStatus
 
 
