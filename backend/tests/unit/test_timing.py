@@ -1,5 +1,4 @@
 import pytest
-
 from app.core.timing import STEP_FIELDS, StepTimer
 
 
@@ -14,6 +13,5 @@ def test_timer_records_step_and_total():
 
 
 def test_timer_rejects_unknown_field():
-    with pytest.raises(ValueError):
-        with StepTimer().measure("khong_ton_tai"):
-            pass
+    with pytest.raises(ValueError), StepTimer().measure("khong_ton_tai"):
+        pass

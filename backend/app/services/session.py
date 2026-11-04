@@ -1,7 +1,7 @@
 """Quản lý phiên xác thực. HIỆN TẠI lưu trong RAM (dict) để chạy được ngay.
 Sau này thay bằng db/repositories/session_repo.py (lưu PostgreSQL), giữ nguyên tên hàm."""
 from dataclasses import dataclass
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from uuid import uuid4
 
 from app.core.config import get_settings
@@ -22,7 +22,7 @@ _STORE: dict[str, SessionRecord] = {}
 
 
 def _now() -> datetime:
-    return datetime.now(timezone.utc)
+    return datetime.now(UTC)
 
 
 def create_session() -> SessionRecord:
