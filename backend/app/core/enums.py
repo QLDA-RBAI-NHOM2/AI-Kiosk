@@ -23,7 +23,7 @@ class FailCode(str, Enum):
     NAME_MISMATCH = "NAME_MISMATCH"              # TC03
     LIVENESS_FAIL = "LIVENESS_FAIL"              # TC07
     FACE_MISMATCH = "FACE_MISMATCH"              # TC05
-
+    TICKET_INVALID_STATUS = "TICKET_INVALID_STATUS"  # vé đã hủy / không còn hiệu lực
 
 # Thông báo tiếng Việt hiển thị trên kiosk, đúng chữ trong hợp đồng.
 FAIL_MESSAGES: dict[FailCode, str] = {
@@ -33,6 +33,7 @@ FAIL_MESSAGES: dict[FailCode, str] = {
     FailCode.NAME_MISMATCH: "Họ tên không khớp",
     FailCode.LIVENESS_FAIL: "Liveness không đạt",
     FailCode.FACE_MISMATCH: "Khuôn mặt không khớp",
+    FailCode.TICKET_INVALID_STATUS: "Vé đã bị hủy hoặc không còn hiệu lực",
 }
 
 
@@ -44,3 +45,4 @@ class ErrorCode(str, Enum):
     INVALID_STATE = "INVALID_STATE"        # gọi sai thứ tự bước
     INVALID_REQUEST = "INVALID_REQUEST"    # dữ liệu gửi lên sai định dạng
     INTERNAL_ERROR = "INTERNAL_ERROR"
+    LIVENESS_INSUFFICIENT_DATA = "LIVENESS_INSUFFICIENT_DATA"
