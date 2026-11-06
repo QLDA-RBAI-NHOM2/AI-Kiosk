@@ -1,7 +1,8 @@
-import time
-import random
 import hashlib
 import hmac
+import random
+import time
+
 import pandas as pd
 import psycopg2
 from psycopg2.extras import execute_values

@@ -1,7 +1,7 @@
 import os
 import qrcode
-import psycopg2
 
+import psycopg2
 DB_CONFIG = {"host": "localhost", "database": "airport_sim", "user": "postgres", "password": "Thanh6624", "port": 5432}
 QR_OUT_DIR = "../../data/qr_out"
 

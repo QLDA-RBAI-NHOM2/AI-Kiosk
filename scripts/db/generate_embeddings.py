@@ -1,6 +1,6 @@
-from deepface import DeepFace
-import numpy as np
 import os
+import numpy as np
+from deepface import DeepFace
 
 OUT_DIR = "../../data/faces_demo"
 os.makedirs(OUT_DIR, exist_ok=True)
@@ -17,7 +17,7 @@ def image_to_embedding(image_path, output_npy_path):
         print(f" -> Thành công! Đã lưu vector ra: {output_npy_path}")
     except ValueError:
         print(f" -> THẤT BẠI: Không tìm thấy khuôn mặt nào trong ảnh {image_path}!")
-    except Exception as e:
+    except (RuntimeError, IOError) as e:
         print(f" -> LỖI HỆ THỐNG: {e}")
 
 if __name__ == "__main__":
