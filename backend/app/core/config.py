@@ -1,4 +1,5 @@
 """Cấu hình đọc từ biến môi trường / file .env (không hard-code bí mật vào code)."""
+from datetime import datetime
 from functools import lru_cache
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -13,7 +14,9 @@ class Settings(BaseSettings):
     admin_token: str = "dev-admin-token"      # tạm; sẽ làm xác thực admin sau
     session_ttl_seconds: int = 120            # phiên hết hạn sau 2 phút
     cors_origins: list[str] = ["http://localhost:5173"]  # địa chỉ frontend (Vite)
-
+    checkin_opens_hours_before: float = 24
+    checkin_closes_minutes_before: int = 45
+    demo_now: datetime | None = None
 @lru_cache
 def get_settings() -> Settings:
     return Settings()
